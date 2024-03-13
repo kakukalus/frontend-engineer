@@ -6,8 +6,30 @@
  */
 var users = [
     {
-        name : 
-    }
+        name  : 'Aufa',
+        age   : 22,
+        major : 'Informatic',
+    },
+    {
+        name  : 'Isfhani Ghiyath',
+        age   : 22,
+        major : 'Informatic',
+    },
+    {
+        name  : 'Nurul',
+        age   : 22,
+        major : 'Informatic System',
+    },
+    {
+        name  : 'Fai',
+        age   : 22,
+        major : 'Informatic System',
+    },
+    {
+        name  : 'Agung',
+        age   : 22,
+        major : 'Informatic System',
+    },
 ];
 
 /**
@@ -16,7 +38,14 @@ var users = [
  * Hint: Gunakan for/for-of.
  * Note: Ubah function menggunakan arrow function.
  */
-function all() {}
+const all = () => {
+    for(const obj_user of users){
+        for(const obj_key in obj_user){
+            console.log(`${obj_key} : ${obj_user[obj_key]}`)
+        }
+        console.log("\n");
+    }
+}
 
 /**
  * TODO 3
@@ -24,7 +53,10 @@ function all() {}
  * Hint: Gunakan method push.
  * Note: Ubah function menggunakan arrow function.
  */
-function store(user) {}
+const store = (user) => {
+    users.push(user);
+    all();
+}
 
 /**
  * TODO 4.
@@ -32,7 +64,10 @@ function store(user) {}
  * Hint: re-assign array.
  * Note: Ubah function menggunakan arrow function.
  */
-function update(index, user) {}
+const update = (index, user) => {
+    users[index] = user;
+    all();
+}
 
 /**
  * TODO 5.
@@ -40,7 +75,10 @@ function update(index, user) {}
  * Hint: Gunakan method splice.
  * Note: Ubah function menggunakan arrow function.
  */
-function destroy(index) {}
+const destroy = (index) => {
+    users.splice(index,1);
+    all();
+}
 
 /**
  * Function main.
