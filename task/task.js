@@ -4,7 +4,11 @@
  * Object memiliki property: name, age, major.
  * Note: Ubah var menggunakan JavaScript Modern.
  */
-var users;
+var users = [
+    {
+        name : 
+    }
+];
 
 /**
  * TODO 2
