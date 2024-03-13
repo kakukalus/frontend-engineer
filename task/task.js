@@ -21,7 +21,7 @@ var users = [
         major : 'Informatic System',
     },
     {
-        name  : 'Fai',
+        name  : 'Fai ',
         age   : 22,
         major : 'Informatic System',
     },
