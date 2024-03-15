@@ -1,4 +1,4 @@
-import users from "../src/data/users.js";
+import users from "../src/models/users.js";
 import {
   formatUser,
   findByName,
