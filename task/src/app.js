@@ -1,3 +1,4 @@
+import {formatUser,findByName, filterByMajor} from './controllers/UserController.js';
 /**
  * TODO 7.
  * Import fungsi formatUser, findByName, fildetByMajor

@@ -1,3 +1,4 @@
+import users from "../models/users.js";
 /**
  * TODO 2.
  * Import variable users dari file data/users.js
@@ -18,7 +19,16 @@
  * - Gunakan method map untuk format user.
  * - Gunakan promise untuk handle asynchronous.
  */
-const formatUser = (title) => {};
+const formatUser = (title) => {
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            const objUser = users.map((user) => {
+                return { ...user, name: `${title} ${user.name}`};
+            })
+            resolve(objUser);
+        },3000);
+    })
+};
 
 /**
  * TODO 4.
@@ -28,7 +38,14 @@ const formatUser = (title) => {};
  * - Gunakan method find untuk mencari 1 user.
  * - Gunakan promise untuk handle asynchronous.
  */
-const findByName = (name) => {};
+const findByName = (name) => {
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            const filterUsersName = users.find(user => user.name === name);
+            resolve(filterUsersName);
+        },2000);
+    });
+};
 
 /**
  * SARAN TODO3 - TODO5.
@@ -44,10 +61,22 @@ const findByName = (name) => {};
  * - Gunakan method filter untuk mencari semua user.
  * - Gunakan promise untuk handle asynchronous.
  */
-const filterByMajor = (major) => {};
+const filterByMajor = (major) => {
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            const filterUsersMajor = users.filter(user => user.major === major);
+            resolve(filterUsersMajor);
+        },2000);
+    });
+};
 
 /**
  * TODO 6.
  * Export fungsi: formatUser, findByName, filterByMajor
  */
 // CODE HERE
+export {
+    formatUser,
+    findByName,
+    filterByMajor
+};
